@@ -18,7 +18,6 @@
     ));
 
     $app->get("/", function() use ($app) {
-        return
-        $app['twig']-render('matches.html.twig');
+        return $app['twig']-render('word_frequency.html.twig');
     });
  ?>

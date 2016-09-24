@@ -30,6 +30,20 @@
             // Assert
             $this->assertEquals(3, $result);
         }
+
+        function test_wordFrequency_multiWordMatchWithCaps()
+        {
+            // Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $phraseInput = "There is a tiny person named Tiny who lives with tiny people that make tiny sand castles in Tiny Town";
+            $keywordInput = "tiny";
+
+            // Act
+            $result = $test_RepeatCounter->countRepeats($phraseInput, $keywordInput);
+
+            // Assert
+            $this->assertEquals(5, $result);
+        }
     }
 
         // protected function tearDown()

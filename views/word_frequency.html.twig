@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+        <title>Word Frequency</title>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='jumbotron pageTitle'>
+                <h1 class="pageTitle">Super Jumbo Word Frequency Location Counter</h1>
+                <hr>
+                <h2>You can enter a phrase and a keyword below... Our app will give you the exact number of times your keyword is found in the phrase!!! </h2>
+                <form action='/results_page' method='post'>
+                    <div class='container'>
+                        <div class="row">
+                            <div class='col-sm-6'>
+                                <h2>Right here is where you can enter in a fun phrase...</h2>
+                                <input type='text' name='phraseInput' class='form-control' placeholder='Wacko Fun Phrase  😜'>
+                            </div>
+                            <div class='col-sm-6'>
+                                <h2>And dis is where you can type a KEy WORd!!</h2>
+                                <input type='text' name='keywordInput' placeholder='😉__KeY WoRd!!!'>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <button type='submit' class='btn-success btn-lg'>Find Word Frequency</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

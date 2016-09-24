@@ -28,7 +28,7 @@
             $result = $test_RepeatCounter->countRepeats($phraseInput, $keywordInput);
 
             // Assert
-            $this->assertEquals(5, $result);
+            $this->assertEquals(3, $result);
         }
 
         function test_wordFrequency_multiWordMatchWithCaps()

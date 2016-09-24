@@ -28,7 +28,7 @@
             $result = $test_RepeatCounter->countRepeats($phraseInput, $keywordInput);
 
             // Assert
-            $this->assertEquals(3, $result);
+            $this->assertEquals(5, $result);
         }
 
         function test_wordFrequency_multiWordMatchWithCaps()
@@ -45,13 +45,4 @@
             $this->assertEquals(5, $result);
         }
     }
-
-        // protected function tearDown()
-        // {
-        //     WordFrequency::deleteAll();
-        //     Matches::deleteAll();
-        // }
-
-
-
 ?>

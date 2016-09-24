@@ -20,4 +20,14 @@
     $app->get("/", function() use ($app) {
         return $app['twig']-render('word_frequency.html.twig');
     });
+
+    $app->post('/results_page', function() use ($app) {
+        $phraseInput = $_POST['phraseInput'];
+        $keywordInput = $_POST['keywordInput'];
+        $repeatCounter = new RepeatCounter;
+        $wordFrequency = $repeatCounter->countRepeats($phraseInput, $keywordInput);
+        return $app['twig']->render('results_page.html.twig', array('wordInstances' => $wordFrequency, 'phraseInput' => $phraseInput, 'keywordInput' => $keywordInput));
+    });
+
+    return $app;
  ?>

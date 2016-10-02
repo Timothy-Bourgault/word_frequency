@@ -10,8 +10,9 @@ _The app that takes a phrase and a word then outputs the number of times the wor
 
 | Behavior |      Input    | Output|
 |----------|:-------------:|:-----:|
+| When the phrase entered has no words that match the keyword, the app returns 0 | Phrase Input: "tony", Keyword Input: "tiny" | "0" |
 | When the phrase entered is a single word and the keyword entered matches it, the app returns the number 1. | Phrase Input: "tiny", Keyword Input: "tiny" | "1" |
-| When the phrase entered consists of multiple words, and within that phrase there are words that match the keyword entered, the app returns the number of instances that the keyword appears in the phrase, but only if the keyword matches exactly | Phrase Input: "There is a tiny person named Tiny who lives with tiny people that make tiny sand castles in Tiny Town", Keyword Input: "tiny"| "3" |
+| When the phrase entered consists of multiple words, and within that phrase there are words that match the keyword entered, the app returns the number of instances that the keyword appears in the phrase, but only if the keyword matches exactly | Phrase Input: "tiny, tiny", Keyword Input: "tiny"| "2" |
 | Again the app counts all exact keyword matches as well as any capitalized versions of the keyword within the phrase | Phrase Input: "There is a tiny person named Tiny who lives with tiny people that make tiny sand castles in Tiny Town", Keyword Input: "tiny" | "5" |
 
 

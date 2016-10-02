@@ -3,6 +3,20 @@
 
     class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
+        function test_wordFrequency_noMatches()
+        {
+            // Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $phraseInput = "tony";
+            $keywordInput = "tiny";
+
+            // Act
+            $result = $test_RepeatCounter->countRepeats($phraseInput, $keywordInput);
+
+            // Assert
+            $this->assertEquals(0, $result);
+        }
+
         function test_wordFrequency_oneWordMatch()
         {
             // Arrange
@@ -21,14 +35,14 @@
         {
             // Arrange
             $test_RepeatCounter = new RepeatCounter;
-            $phraseInput = "There is a tiny person named Tiny who lives with tiny people that make tiny sand castles in Tiny Town";
+            $phraseInput = "tiny tiny";
             $keywordInput = "tiny";
 
             // Act
             $result = $test_RepeatCounter->countRepeats($phraseInput, $keywordInput);
 
             // Assert
-            $this->assertEquals(3, $result);
+            $this->assertEquals(2, $result);
         }
 
         function test_wordFrequency_multiWordMatchWithCaps()
